@@ -8,16 +8,21 @@
 </head>
 
 <body>
- <header>
+  <div class="top-bar">
+  <p>NEW MATTE LIPGLOSS GOING FOR $10</p>
+  </div>
+
+ <header class="navbar">
       <h2>Shiny<span class="fadez">Glam<span></h2>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#">Collections</a></li>
           <li><a href="#">price</a></li>
         </ul>
       </nav>
+      <div class="menu-toggle">☰</div>
      
     </header>
    
@@ -160,6 +165,18 @@
     <i class="fa-brands fa-instagram"></i>
   </div>
 </footer>
+
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+
+  toggle.onclick = () => {
+    nav.classList.toggle("active");
+  };
+</script>
+
+
+
 
 <script>
 const footer = document.querySelector('.footer');
