@@ -1,0 +1,335 @@
+  body{
+    margin: 0;
+      font-family: 'Georgia', serif;
+    }
+   
+ header {
+        background-color:black;
+        padding:1rem 4rem;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-bottom:1px solid #262626;
+      }
+      header h2 {
+        color:white;
+        font-size:1.3rem;
+      }
+      
+      header .fadez {
+        color:#233D4C;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      nav ul {
+        display:flex;
+        align-items:flex-end;
+        gap:2rem;
+        list-style:none;
+      }
+      nav a {
+        color:white;
+        text-decoration:none;    
+      }
+      nav a:hover{
+        color:#D92525;
+      }
+    
+    .hero {
+      position:relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:flex-start;   
+      text-align: left;
+      height: 100vh;
+
+      height: 100vh;
+      padding: 0 4rem;
+      color: white;
+      overflow: hidden;
+    }
+
+    
+    .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(11, 11, 11, 0.6), rgba(0,0,0,0.6)),
+    url("https://i.postimg.cc/BQz4VvQw/Soft-Glam-Day-Date-Effortlessly-Chic-Eyeshadow-Glossy-Lips.jpg");
+
+  background-size: cover;        /* VERY IMPORTANT */
+  background-position: center;   /* keeps image centered */
+  background-repeat: no-repeat;  /* prevents splitting */
+
+  z-index: -1;
+}
+
+    
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .hero span{
+        color:#FD802E ;
+        font-family: Georgia, 'Times New Roman', Times, serif; 
+    }
+
+    
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 500px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+
+      background-color:#233D4C ;
+      color: black; 
+      border: none;
+      border-radius: 20px;
+
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: pink;
+      transform: translateY(-2px);
+    }
+
+    
+   
+/* ABOUT */
+.about{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  padding:80px 60px;
+  background: #233D4C;
+}
+
+.about img{
+  width:400px;
+  border-radius:12px;
+ 
+}
+
+.about-text{
+  max-width:500px;
+}
+
+.about h2{
+  color:#FD802E;
+  margin-bottom:15px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* COLLECTION */
+.collection{
+  padding:80px 60px;
+  text-align:center;
+}
+
+.collection h2{
+  color: #FD802E;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+}
+
+.card{
+  background:whitesmoke;
+ 
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.card p{
+  color:#FD802E;
+  font-size:12px;
+  font-weight: 300;
+
+}
+
+.card span{
+  display:block;
+  color:black;
+  margin:10px 0;
+}
+
+.card a{
+  display:inline-block;
+  background:#233D4C;
+  color:white;
+  padding:10px;
+  text-decoration:none;
+  font-size: larger;
+  margin-top:8px;
+  border-radius: 5px;
+}
+
+/* HOVER */
+.card:hover{
+  transform:translateY(-10px);
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about{
+    flex-direction:column;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .navbar{
+    padding:20px;
+  }
+}
+
+.footer {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 100px 20px 50px;
+  font-family: 'Georgia', serif;
+}
+
+/* Title */
+.footer-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 25px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+/* Subtext */
+.footer-text {
+  font-size: 1.15rem;
+  color: #233D4C;
+  margin-bottom: 50px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+.footer-title span{
+  color: #FD802E;
+}
+
+/* Email box */
+.email-box {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  border: 1.5px solid #aaa;
+  transition: all 0.3s ease;
+}
+
+/* PREMIUM hover effect */
+.email-box:focus-within {
+  border-color: #000;
+}
+
+/* Input */
+.email-box input {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+/* Button */
+.email-box button {
+  width: 80px;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #111;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow animation */
+.email-box button:hover {
+  transform: translateX(5px);
+}
+
+/* Bottom section */
+.footer-bottom {
+  margin-top: 80px;
+}
+
+/* Instagram icon */
+.footer-bottom i {
+  font-size: 26px;
+  color: #111;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-bottom i:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-title {
+    font-size: 2rem;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+
+  .email-box {
+    flex-direction: row;
+  }
+}
