@@ -5,15 +5,7 @@
    
  
         
-      .top-bar{
-        background: #111;
-        color: white;
-        text-align: center;
-        font-size: 0.75rem;
-        padding: 0.5rem;
-        letter-spacing: 1px;
-      }
-    
+          
 /* NAVBAR */
 .navbar {
   display: flex;
